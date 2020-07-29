@@ -1,8 +1,8 @@
 export class PersonModel {
   constructor(
-    private id: number,
-    private name: string,
-    private age: number,
-    private email: string,
+    public id: number,
+    public name: string,
+    public age: number,
+    public email: string,
   ) {}
 }
