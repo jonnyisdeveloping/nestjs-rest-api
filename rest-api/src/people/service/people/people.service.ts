@@ -41,6 +41,14 @@ export class PeopleService {
     return true;
   }
 
+  delete(id: number): boolean {
+    const data = this.searchPerson(id);
+    if (data === null) return null;
+
+    this.people.splice(data.index, 1);
+    return true;
+  }
+
   searchPerson(id: number): { person: PersonModel; index: number } {
     const index = this.people.findIndex(e => e.id === id);
     if (index === -1) return null;
